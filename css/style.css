@@ -17,8 +17,15 @@ li{
 }
 a{
  text-decoration: none;
+ color: black;
 }
-.nav-barv.nav-liste{
+.nav-bar .nav-liste{
 display: flex;
+gap: 20px;
+
+
+
+
 
 }
+.nav-bar .nav-liste 
