@@ -1,31 +1,627 @@
-*  {
-margin: 0;
-padding: 0;
-font-family: "Poppins", sans-serif;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-header.nav-bar{
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
+
+
+body {
+  background: #fff;
+  color: #333;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/*  HEADER NAVIGATION  */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.logo .titre {
+  color: #ff7f00; /* orange */
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #ff7f00;
+  border-radius: 2px;
+}
+
+.bar-de-recherche {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.bar-de-recherche input[type="search"] {
+  padding: 8px 12px;
+  border: 1.5px solid #ff7f00;
+  border-radius: 5px;
+  width: 180px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.bar-de-recherche input[type="search"]:focus {
+  outline: none;
+  border-color: #cc6600;
+}
+
+.bar-de-recherche button {
+  background-color: #ff7f00;
+  color: white;
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.bar-de-recherche button:hover {
+  background-color: #cc6600;
+}
+
+.nav-liste {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.nav-titre a {
+  font-weight: 600;
+  color: #444;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-titre a:hover {
+  background-color: #ff7f00;
+  color: white;
+}
+
+.CONNEXION button {
+  background-color: #ff7f00;
+  color: white;
+  padding: 8px 14px;
+  margin-left: 5px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.CONNEXION button:hover {
+  background-color: #cc6600;
+}
+
+/* Responsive menu hamburger */
+@media (max-width: 900px) {
+  .menu-toggle {
     display: flex;
-} 
-li{
- list-style: none;
+  }
+
+  .nav-liste {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+    background-color: white;
+    padding: 15px 0;
+  }
+
+  .nav-liste.active {
+    display: flex;
+  }
+
+  .nav-titre a {
+    padding: 12px 20px;
+  }
+
+  .CONNEXION {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .bar-de-recherche {
+    width: 100%;
+    justify-content: center;
+    margin: 15px 0;
+  }
 }
-a{
- text-decoration: none;
- color: black;
+
+/* ===== MAIN ===== */
+main {
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
-.nav-bar .nav-liste{
-display: flex;
-gap: 20px;
 
-
-
-
-
+/* --- Section d'intro (African Food + description + plats) --- */
+.fist-presentation {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  align-items: center;
 }
-.nav-bar .nav-liste 
+
+/* Texte principal à gauche */
+.texte-principal {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+.texte-principal h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.texte-principal span {
+  color: #ff7f00;
+}
+
+/* Description à droite */
+.description {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+.description h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.description .resto {
+  color: #ff7f00;
+}
+
+.paragraphe1 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.button1 {
+  background-color: #ff7f00;
+  color: white;
+  border-radius: 6px;
+  padding: 12px 28px;
+  font-weight: 700;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.button1:hover {
+  background-color: #cc6600;
+}
+
+/* --- Section Nouveautés: plats alignés horizontalement --- */
+.second-presentation {
+  flex: 2 1 600px;
+  min-width: 300px;
+}
+
+.second-presentation .Entrée-description {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.second-presentation .Entrée-description > div {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.second-presentation .Entrée-description > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 5px 12px rgb(0 0 0 / 0.15);
+}
+
+.second-presentation img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.second-presentation h4 {
+  font-weight: 700px;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.second-presentation h4 em {
+  font-style: normal;
+  color: #ff7f00;
+}
+
+.second-presentation .button {
+  background-color: #ff7f00;
+  color: white;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-weight: 600;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.second-presentation .button:hover {
+  background-color: #cc6600;
+}
+
+/* ===== SECTION CHEFS ===== */
+.chefs {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.titre-chefs h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.titre-chefs .titre-E {
+  color: #ff7f00;
+}
+
+.p {
+  color: #555;
+  max-width: 650px;
+  margin: 0 auto 30px auto;
+}
+
+.conteneur {
+  display: flex;
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+}
+
+.conteneur .chef img {
+  width: 200px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+}
+
+.conteneur .descrip {
+  flex: 1;
+  min-width: 250px;
+}
+
+.conteneur .descrip h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.conteneur .descrip p {
+  color: #555;
+  line-height: 1.4;
+}
+
+/* ===== SECTION TEMOIGNAGES ===== */
+.Temoignages {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.Temoignages h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.Temoignages h4 span {
+  color: #ff7f00;
+}
+
+.temoig-conteneur {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.temoignage1, .temoignage2, .temoignage3 {
+  background-color: #fafafa;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 320px;
+  box-shadow: 0 3px 7px rgb(0 0 0 / 0.1);
+  text-align: center;
+}
+
+.temoignage1 img, .temoignage2 img, .temoignage3 img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.temoignage1 p, .temoignage2 p, .temoignage3 p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* FORMULAIRE CONTACT  */
+.form {
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 0.1);
+}
+
+.form-cont {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.nm, .email, .message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.nm label, .email label, .message label {
+  font-weight: 600;
+  color: #ff7f00;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.nm input, .email input, .message textarea {
+  padding: 10px 14px;
+  border: 1.5px solid #ff7f00;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.nm input:focus, .email input:focus, .message textarea:focus {
+  outline: none;
+  border-color: #cc6600;
+}
+
+.message textarea {
+  min-height: 120px;
+}
+
+.but-cont {
+  text-align: center;
+}
+
+.but-cont button {
+  background-color: #ff7f00;
+  color: white;
+  padding: 12px 32px;
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.but-cont button:hover {
+  background-color: #cc6600;
+}
+
+/*  FOOTER  */
+footer {
+  background-color: #222;
+  color: #ddd;
+  padding: 40px 20px;
+  font-size: 0.95rem;
+}
+
+.conteneur2 {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.n-cont, .c-cont, .s-cont {
+  flex: 1 1 280px;
+  min-width: 250px;
+}
+
+.n-cont .titre {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #ff7f00;
+  margin-bottom: 15px;
+}
+
+.n-cont p {
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.c-cont h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ff7f00;
+}
+
+.c-cont p, .c-cont a p {
+  margin-bottom: 10px;
+  color: #ccc;
+  cursor: default;
+}
+
+.c-cont a p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.c-cont-reseaux a {
+  color: #ccc;
+  font-size: 1.4rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.c-cont-reseaux a:hover {
+  color: #ff7f00;
+}
+
+.s-cont h1 {
+  color: #ff7f00;
+  margin-bottom: 20px;
+}
+
+.inp-s-cont input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+#but-s-cont button {
+  background-color: #ff7f00;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-weight: 700;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+#but-s-cont button:hover {
+  background-color: #cc6600;
+}
+
+.inp-lg-s-cont input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+/* RESPONSIVE  */
+@media (max-width: 1024px) {
+  .fist-presentation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .second-presentation {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .second-presentation .Entrée-description {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .conteneur {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .temoig-conteneur {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-bar {
+    padding: 10px 15px;
+  }
+
+  .bar-de-recherche input[type="search"] {
+    width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-titre a {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .bar-de-recherche input[type="search"] {
+    width: 120px;
+  }
+
+  .button1, .second-presentation .button, .CONNEXION button, .but-cont button, #but-s-cont button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .temoignage1, .temoignage2, .temoignage3 {
+    max-width: 90vw;
+  }
+
+  footer {
+    font-size: 0.85rem;
+  }
+}

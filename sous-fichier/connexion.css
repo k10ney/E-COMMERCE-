@@ -1,0 +1,377 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+  background: #fff;
+  color: #333;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/*  HEADER NAVIGATION  */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.logo .titre {
+  color: #ff7f00; /* orange */
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #ff7f00;
+  border-radius: 2px;
+}
+
+.bar-de-recherche {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.bar-de-recherche input[type="search"] {
+  padding: 8px 12px;
+  border: 1.5px solid #ff7f00;
+  border-radius: 5px;
+  width: 180px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.bar-de-recherche input[type="search"]:focus {
+  outline: none;
+  border-color: #cc6600;
+}
+
+.bar-de-recherche button {
+  background-color: #ff7f00;
+  color: white;
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.bar-de-recherche button:hover {
+  background-color: #cc6600;
+}
+
+.nav-liste {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.nav-titre a {
+  font-weight: 600;
+  color: #444;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-titre a:hover {
+  background-color: #ff7f00;
+  color: white;
+}
+
+.CONNEXION button {
+  background-color: #ff7f00;
+  color: white;
+  padding: 8px 14px;
+  margin-left: 5px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.CONNEXION button:hover {
+  background-color: #cc6600;
+}
+
+/* Responsive menu hamburger */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-liste {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+    background-color: white;
+    padding: 15px 0;
+  }
+
+  .nav-liste.active {
+    display: flex;
+  }
+
+  .nav-titre a {
+    padding: 12px 20px;
+  }
+
+  .CONNEXION {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .bar-de-recherche {
+    width: 100%;
+    justify-content: center;
+    margin: 15px 0;
+  }
+}
+
+/* SECTION DE BIENVENUE ET DESCRIPTION */
+.welcome-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+  color: #333;
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem;
+  color: #ff7f00;
+  margin-bottom: 20px;
+}
+
+.welcome-section p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* FORMULAIRE DE CONNEXION */
+.descrip-logo-connect {
+  max-width: 400px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.descrip-logo-connect .logo {
+  font-size: 2rem;
+  color: #ff7f00;
+  margin-bottom: 20px;
+}
+
+.connec-titre h1 {
+  font-size: 1.8rem;
+  color: #222;
+}
+
+.connec-titre h3 {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.connec-logo i {
+  font-size: 2.5rem;
+  color: #ff7f00;
+  margin-bottom: 20px;
+}
+
+.name-connec input,
+.pass-connec input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.but-connec button {
+  background-color: #ff7f00;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.but-connec button:hover {
+  background-color: #cc6600;
+}
+
+.forget-connec a {
+  color: #ff7f00;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.forget-connec a:hover {
+  text-decoration: underline;
+}
+
+/*  FOOTER  */
+footer {
+  background-color: #222;
+  color: #ddd;
+  padding: 40px 20px;
+  font-size: 0.95rem;
+}
+
+.conteneur2 {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.n-cont, .c-cont, .s-cont {
+  flex: 1 1 280px;
+  min-width: 250px;
+}
+
+.n-cont .titre {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #ff7f00;
+  margin-bottom: 15px;
+}
+
+.n-cont p {
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.c-cont h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ff7f00;
+}
+
+.c-cont p, .c-cont a p {
+  margin-bottom: 10px;
+  color: #ccc;
+  cursor: default;
+}
+
+.c-cont a p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.c-cont-reseaux a {
+  color: #ccc;
+  font-size: 1.4rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.c-cont-reseaux a:hover {
+  color: #ff7f00;
+}
+
+.s-cont h1 {
+  color: #ff7f00;
+  margin-bottom: 20px;
+}
+
+.inp-s-cont input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+#but-s-cont button {
+  background-color: #ff7f00;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-weight: 700;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+#but-s-cont button:hover {
+  background-color: #cc6600;
+}
+
+.inp-lg-s-cont input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .conteneur2 {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .welcome-section {
+    padding: 30px 10px;
+  }
+
+  .descrip-logo-connect {
+    margin: 20px;
+  }
+}
