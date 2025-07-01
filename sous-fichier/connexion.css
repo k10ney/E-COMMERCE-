@@ -171,6 +171,7 @@ button {
 
   .nav-liste.active {
     display: flex;
+    font-size: 10px;
   }
 
   .nav-titre a {
