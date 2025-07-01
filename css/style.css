@@ -13,6 +13,31 @@ body {
   line-height: 1.5;
   font-size: 16px;
 }
+/* style des font-aversone panier et couleur */
+.fa-palette{
+  cursor: pointer;
+}
+.fa-palette:hover{
+color: #ff7f00 ;
+}
+.fa-palette:focus{
+  color: rgb(241, 5, 5);
+}
+.fa-shopping-cart{
+  cursor: pointer;
+}
+
+.fa-shopping-cart:hover{
+  color: #ff7f00 ;
+}
+.fa-shopping-cart:focus{
+  color: rgb(241, 5, 5);
+}
+
+/* changement de couleur  de la page */
+body.active{
+  background: #a5a1a1;
+}
 
 a {
   text-decoration: none;
@@ -29,6 +54,7 @@ button {
 
 /*  HEADER NAVIGATION  */
 .nav-bar {
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -237,6 +263,16 @@ main {
 }
 
 /* --- Section Nouveautés: plats alignés horizontalement --- */
+.Nouveautés{
+    margin-left: 30%;
+  margin-top: 40px;
+color: black;
+  font-weight: bold;
+  font-size: 25px;
+}
+.Nouveautés .N{
+ color: #ff7f00;
+}
 .second-presentation {
   flex: 2 1 600px;
   min-width: 300px;
@@ -625,3 +661,7 @@ footer {
     font-size: 0.85rem;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+

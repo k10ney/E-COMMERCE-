@@ -36,16 +36,21 @@
       </div>
 
       <ul class="nav-liste">
-        <li class="nav-titre"><a href="#" class="nav-link">Accueil</a></li>
-        <li class="nav-titre"><a href="#" class="nav-link">Nouveautés</a></li>
+        <li class="nav-titre"><a href="#A" class="nav-link">Accueil</a></li>
+        <li class="nav-titre"><a href="#B" class="nav-link">Nouveautés</a></li>
         <!-- <li class="nav-titre"><a href="#" class="nav-link">Categories</a></li> -->
-        <li class="nav-titre"><a href="#" class="nav-link">Expert</a></li>
-        <li class="nav-titre"><a href="#" class="nav-link">Temoignages</a></li>
-        <li class="nav-titre"><a href="#" class="nav-link">Contact</a></li>
-        <li class="nav-titre"><a href="#" class="nav-link">Pannier</a></li>
-        <li class="nav-titre"><a href="#" class="nav-link">A la carte</a></li>
+        <li class="nav-titre"><a href="#C" class="nav-link">Expert</a></li>
+        <li class="nav-titre"><a href="#D" class="nav-link">Temoignages</a></li>
+        <li class="nav-titre"><a href="#E" class="nav-link">Contact</a></li>
+    
+        <li class="nav-titre"><a href="" class="nav-link">A la carte</a></li>
+         <li class="nav-titre"><a href="#" class="nav-link">Plats</a></li>
+        
         <li>
-          <a href="#"><i class="fas fa-phone"></i></a>
+          <a href="#"><i class="fas fa-palette" onclick="couleur()"></i></a>
+        </li>
+         <li>
+          <a href="#"><i class="fas fa-shopping-cart" ></i></a>
         </li>
         <div class="CONNEXION">
           <a href="sous-fichier/connexion.html"
@@ -56,7 +61,7 @@
       </ul>
     </nav>
   </header>
-
+  <section>
   <main>
     <div class="fist-presentation">
       <div class="texte-principal">
@@ -77,7 +82,9 @@
           qualité inégalée
         </p>
         <a href="#"><button class="button1"> Réservez</button></a>
-        <div class="Nouveautés"> Nouveautés</div>
+         </sections  id="A">
+         <section id="B">
+        <div class="Nouveautés"> <span class="N">N</span>ouveautés</div>
       </div>
       <div class="second-presentation">
         <div class="Entrée-description">
@@ -144,6 +151,8 @@
         </div>
       </div>
     </div>
+    </section>
+    <section id="C">
     <div class="chefs">
       <div class="titre-chefs">
         <div class="para-chefs">
@@ -189,6 +198,8 @@
     <div class="Temoignages">
       <h4><span>N</span>os clients</h4>
     </div>
+    </section>
+    <section id="D">
     <div class="temoig-conteneur">
       <div class="temoignage1">
         <img src="imges/temoignage1.png" width="300px" alt="" />
@@ -223,7 +234,8 @@
       </p>
       </div>
     </div>
-   
+    </section>
+   <section id="E">
     <div class="form">
       
     <h2 class="form-cont">CONTACTEZ NOUS</h2>
@@ -243,6 +255,7 @@
         <button>Envoyez</button>
       </div>
     </div>
+    </section>
   </main>
 
   <footer>
@@ -325,6 +338,11 @@
 
   <!-- Script menu toggle -->
   <script>
+    function couleur(){
+      alert("vous allez changer la couleur de la page")
+      const col=document.querySelectorAll(".fa-phone")
+      document.body.classList.toggle("active")
+    }
     const toggle = document.getElementById("menu-toggle");
     const navList = document.querySelector(".nav-liste");
 
@@ -332,6 +350,7 @@
       toggle.classList.toggle("active");
       navList.classList.toggle("active");
     });
+    
   </script>
 </body>
 </html>
