@@ -54,7 +54,7 @@ button {
 
 /*  HEADER NAVIGATION  */
 .nav-bar {
-  position: fixed;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
