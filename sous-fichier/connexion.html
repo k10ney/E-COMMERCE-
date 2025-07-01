@@ -70,7 +70,6 @@
     </p>
   </section>
 
-  <!-- FORMULAIRE DE CONNEXION -->
   <div class="descrip-logo-connect">
     <div class="logo">
       <span class="titre">African </span>Food
@@ -174,6 +173,13 @@
       const col=document.querySelectorAll(".fa-phone")
       document.body.classList.toggle("active")
     }
+     const toggle = document.getElementById("menu-toggle");
+    const navList = document.querySelector(".nav-liste");
+
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("active");
+      navList.classList.toggle("active");
+    });
     
  </script>
 </body>
