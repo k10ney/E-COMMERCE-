@@ -13,6 +13,31 @@ body {
   line-height: 1.5;
   font-size: 16px;
 }
+/* style des font-aversone panier et couleur */
+.fa-palette{
+  cursor: pointer;
+}
+.fa-palette:hover{
+color: #ff7f00 ;
+}
+.fa-palette:focus{
+  color: rgb(241, 5, 5);
+}
+.fa-shopping-cart{
+  cursor: pointer;
+}
+
+.fa-shopping-cart:hover{
+  color: #ff7f00 ;
+}
+.fa-shopping-cart:focus{
+  color: rgb(241, 5, 5);
+}
+
+/* changement de couleur  de la page */
+body.active{
+  background: #a5a1a1;
+}
 
 a {
   text-decoration: none;
@@ -29,6 +54,7 @@ button {
 
 /*  HEADER NAVIGATION  */
 .nav-bar {
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,7 +65,7 @@ button {
 }
 
 .logo .titre {
-  color: #ff7f00; /* orange */
+  color: #ff7f00; 
   font-weight: 900;
   font-size: 1.8rem;
 }
@@ -374,4 +400,7 @@ footer {
   .descrip-logo-connect {
     margin: 20px;
   }
+}
+html {
+  scroll-behavior: smooth;
 }

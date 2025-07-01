@@ -36,16 +36,20 @@
       </div>
 
       <ul class="nav-liste">
-        <li class="nav-titre"><a href="#" class="nav-link">Accueil</a></li>
-        <li class="nav-titre"><a href="#" class="nav-link">Nouveautés</a></li>
+        <li class="nav-titre"><a href="/index.html#A" class="nav-link">Accueil</a></li>
+        <li class="nav-titre"><a href="/index.html#B" class="nav-link">Nouveautés</a></li>
         <!-- <li class="nav-titre"><a href="#" class="nav-link">Categories</a></li> -->
-        <li class="nav-titre"><a href="#" class="nav-link">Expert</a></li>
-        <li class="nav-titre"><a href="#" class="nav-link">Temoignages</a></li>
-        <li class="nav-titre"><a href="#" class="nav-link">Contact</a></li>
-        <li class="nav-titre"><a href="#" class="nav-link">Pannier</a></li>
+        <li class="nav-titre"><a href="/index.html#C" class="nav-link">Expert</a></li>
+        <li class="nav-titre"><a href="/index.html#D" class="nav-link">Temoignages</a></li>
+        <li class="nav-titre"><a href="/index.html#E" class="nav-link">Contact</a></li>
+
         <li class="nav-titre"><a href="#" class="nav-link">A la carte</a></li>
+         <li class="nav-titre"><a href="#" class="nav-link">Plats</a></li>
         <li>
-          <a href="#"><i class="fas fa-phone"></i></a>
+          <a href="#"><i class="fas fa-palette" onclick="couleur()"></i></a>
+        </li>
+         <li>
+          <a href="#"><i class="fas fa-shopping-cart" ></i></a>
         </li>
         <div class="CONNEXION">
           <a href="sous-fichier/connection.html"
@@ -140,6 +144,12 @@
       </div>
     </div>
   </footer>
-
+ <script>
+  function couleur(){
+      alert("vous allez changer la couleur de la page")
+      const col=document.querySelectorAll(".fa-phone")
+      document.body.classList.toggle("active")
+    }
+ </script>
 </body>
 </html>
