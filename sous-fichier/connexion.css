@@ -54,7 +54,7 @@ button {
 
 /*  HEADER NAVIGATION  */
 .nav-bar {
-  position: fixed;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,7 +65,7 @@ button {
 }
 
 .logo .titre {
-  color: #ff7f00; 
+  color: #ff7f00; /* orange */
   font-weight: 900;
   font-size: 1.8rem;
 }
@@ -171,8 +171,7 @@ button {
 
   .nav-liste.active {
     display: flex;
-    font-size: 5px;
-    
+    font-size: 10px;
   }
 
   .nav-titre a {
