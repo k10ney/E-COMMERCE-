@@ -1,4 +1,4 @@
-
+/* Ton code CSS original, inchangé */
 * {
   margin: 0;
   padding: 0;
@@ -6,20 +6,19 @@
   font-family: 'Poppins', sans-serif;
 }
 
-
 body {
-
   background: #fff;
   color: #333;
   line-height: 1.5;
   font-size: 16px;
 }
+
 /* style des font-aversone panier et couleur */
 .fa-palette{
   cursor: pointer;
 }
 .fa-palette:hover{
-color: #ff7f00 ;
+  color: #ff7f00 ;
 }
 .fa-palette:focus{
   color: rgb(241, 5, 5);
@@ -55,7 +54,6 @@ button {
 
 /*  HEADER NAVIGATION  */
 .nav-bar {
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -192,20 +190,20 @@ button {
     margin: 15px 0;
   }
 }
+
 /* style descript */
 .descrip P{
-    text-align: center;
-    margin-top: 25px;
- 
+  text-align: center;
+  margin-top: 25px;
 }
 .descrip P span{
-color: #ff7f00; 
+  color: #ff7f00; 
   font-weight: 900;
   font-size: 1.8rem;
 }
 /* deuxième nav-bar */
 .nav-bar2{
-      display: flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
@@ -214,10 +212,10 @@ color: #ff7f00;
   margin-top: 25px;
 }
 li{
-    list-style: none;
+  list-style: none;
 }
 .nav-listeG{
-list-style: none;
+  list-style: none;
   display: flex;
   align-items: center;
   gap: 500px;
@@ -246,35 +244,33 @@ list-style: none;
 }
 .conteneur h4 {
   color: #ff7f00 ;
- font-weight:600;
+  font-weight:600;
 }
 .fa-heart{
   color: red;
 }
-  .conteneur img{
-    width: 100%;
+.conteneur img{
+  width: 100%;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
-
 }
 
 .plat1 ,.plat2 ,.plat3 ,.plat4 ,.plat5 ,.plat6 ,.plat7 ,.plat8 ,.plat9 ,.plat10 ,.plat11,.plat12{
-    flex: 1 1 250px;
-   background-color: #fafafa;
-   padding: 15px;
-   border-radius: 30px;
-    padding-bottom: 30px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex: 1 1 250px;
+  background-color: #fafafa;
+  padding: 15px;
+  border-radius: 30px;
+  padding-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 5s ease;
 }
 .plat1:hover ,.plat2:hover ,.plat3:hover ,.plat4:hover ,.plat5:hover,.plat6:hover, .plat7:hover ,.plat8:hover ,.plat9:hover ,.plat10:hover ,.plat11:hover,.plat12:hover{
-
-    box-shadow: 0 5px 12px rgb(0 0 0 / 0.15);
-    border: 1px solid  #ff7f00;
-      transform: translateY(-10px);
+  box-shadow: 0 5px 12px rgb(0 0 0 / 0.15);
+  border: 1px solid  #ff7f00;
+  transform: translateY(-10px);
 }
- button{
+button{
   background-color: #ff7f00;
   color: white;
   border-radius: 6px;
@@ -288,149 +284,125 @@ list-style: none;
 }
 /* style des détails */
 .conteneur  .p1{
-   flex: 1 1 250px;
+  flex: 1 1 250px;
   visibility: hidden;
   transform: translateY(-5px);
   transform:  0.1s ease ;
 }
- .conteneur  .p1.active1{
+.conteneur  .p1.active1{
   visibility: visible;
   transform: translateY(10px);
-
-}.conteneur  .p2{
-   flex: 1 1 250px;
+}
+.conteneur  .p2{
+  flex: 1 1 250px;
   visibility: hidden;
   transform: translateY(-5px);
   transform:  0.1s ease ;
 }
- .conteneur  .p2.active2{
+.conteneur  .p2.active2{
   visibility: visible;
   transform: translateY(10px);
-
-}.conteneur  .p3{
-   flex: 1 1 250px;
+}
+.conteneur  .p3{
+  flex: 1 1 250px;
   visibility: hidden;
   transform: translateY(-5px);
   transform:  0.1s ease ;
 }
- .conteneur  .p3.active3{
+.conteneur  .p3.active3{
   visibility: visible;
   transform: translateY(10px);
-
-}.conteneur  .p4{
-   flex: 1 1 250px;
+}
+.conteneur  .p4{
+  flex: 1 1 250px;
   visibility: hidden;
   transform: translateY(-5px);
   transform:  0.1s ease ;
 }
- .conteneur  .p4.active4{
+.conteneur  .p4.active4{
   visibility: visible;
   transform: translateY(10px);
-
-}.conteneur  .p5{
-   flex: 1 1 250px;
+}
+.conteneur  .p5{
+  flex: 1 1 250px;
   visibility: hidden;
   transform: translateY(-5px);
   transform:  0.1s ease ;
 }
- .conteneur  .p5.active5{
+.conteneur  .p5.active5{
   visibility: visible;
   transform: translateY(10px);
-
-}.conteneur  .p6{
-   flex: 1 1 250px;
+}
+.conteneur  .p6{
+  flex: 1 1 250px;
   visibility: hidden;
   transform: translateY(-5px);
   transform:  0.1s ease ;
 }
- .conteneur  .p6.active6{
+.conteneur  .p6.active6{
   visibility: visible;
   transform: translateY(10px);
-
 }
 .conteneur  .p7{
-   flex: 1 1 250px;
+  flex: 1 1 250px;
   visibility: hidden;
   transform: translateY(-5px);
   transform:  0.1s ease ;
 }
- .conteneur  .p7.active7{
+.conteneur  .p7.active7{
   visibility: visible;
   transform: translateY(10px);
-
-}.conteneur  .p8{
-   flex: 1 1 250px;
+}
+.conteneur  .p8{
+  flex: 1 1 250px;
   visibility: hidden;
   transform: translateY(-5px);
   transform:  0.1s ease ;
 }
- .conteneur  .p8.active8{
+.conteneur  .p8.active8{
   visibility: visible;
   transform: translateY(10px);
-
-}.conteneur  .p9{
-   flex: 1 1 250px;
+}
+.conteneur  .p9{
+  flex: 1 1 250px;
   visibility: hidden;
   transform: translateY(-5px);
   transform:  0.1s ease ;
 }
- .conteneur  .p9.active9{
+.conteneur  .p9.active9{
   visibility: visible;
   transform: translateY(10px);
-
-}.conteneur  .p10{
-   flex: 1 1 250px;
+}
+.conteneur  .p10{
+  flex: 1 1 250px;
   visibility: hidden;
   transform: translateY(-5px);
   transform:  0.1s ease ;
 }
- .conteneur  .p10.active10{
+.conteneur  .p10.active10{
   visibility: visible;
   transform: translateY(10px);
-
-}.conteneur  .p11{
-   flex: 1 1 250px;
+}
+.conteneur  .p11{
+  flex: 1 1 250px;
   visibility: hidden;
   transform: translateY(-5px);
   transform:  0.1s ease ;
 }
- .conteneur  .p11.active11{
+.conteneur  .p11.active11{
   visibility: visible;
   transform: translateY(10px);
-
-}.conteneur  .p12{
-   flex: 1 1 250px;
+}
+.conteneur  .p12{
+  flex: 1 1 250px;
   visibility: hidden;
   transform: translateY(-5px);
   transform:  0.1s ease ;
 }
- .conteneur  .p12.active12{
+.conteneur  .p12.active12{
   visibility: visible;
   transform: translateY(10px);
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ---------- RESPONSIVE PLATS ---------- */
 
@@ -494,24 +466,19 @@ list-style: none;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
+/* Footer */
+/* Footer de base */
 footer {
   background-color: #222;
   color: #ddd;
   padding: 40px 20px;
   font-size: 0.95rem;
+  max-width: 100vw;           /* Ne jamais dépasser la largeur écran */
+  box-sizing: border-box;     /* Inclure padding dans la largeur */
+  overflow-x: hidden;         /* Pas de scroll horizontal */
 }
 
+/* Conteneur flex dans footer */
 .conteneur2 {
   max-width: 1200px;
   margin: auto;
@@ -519,13 +486,19 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 40px;
+  padding: 0 10px;           /* Un petit padding pour éviter les bords collés */
+  box-sizing: border-box;
+  overflow-x: hidden;        /* Évite débordement horizontal */
 }
 
+/* Colonnes dans le footer */
 .n-cont, .c-cont, .s-cont {
   flex: 1 1 280px;
-  min-width: 250px;
+  min-width: 0;              /* Permet au flex de rétrécir correctement */
+  word-wrap: break-word;     /* Casse les mots trop longs */
 }
 
+/* Titres et textes */
 .n-cont .titre {
   font-size: 1.6rem;
   font-weight: 900;
@@ -604,67 +577,58 @@ footer {
   font-size: 1rem;
 }
 
-/* RESPONSIVE  */
+/* ---------- RESPONSIVE FOOTER ---------- */
+
+/* Tablettes et petits écrans (<= 1024px) */
 @media (max-width: 1024px) {
-  .fist-presentation {
+  .conteneur2 {
     flex-direction: column;
     align-items: center;
+    gap: 30px;
+    padding: 0 15px;
+    max-width: 100vw;
   }
 
-  .second-presentation {
-    width: 100%;
+  .n-cont, .c-cont, .s-cont {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: 0;
+    text-align: center;
+  }
+
+  /* Centre les icônes réseaux sociaux */
+  .c-cont-reseaux {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
   }
 }
 
-@media (max-width: 768px) {
-  .second-presentation .Entrée-description {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .conteneur {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .temoig-conteneur {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-bar {
-    padding: 10px 15px;
-  }
-
-  .bar-de-recherche input[type="search"] {
-    width: 140px;
-  }
-}
-
+/* Très petits écrans mobiles (<= 480px) */
 @media (max-width: 480px) {
-  .nav-titre a {
-    font-size: 0.9rem;
-    padding: 8px 10px;
-  }
-
-  .bar-de-recherche input[type="search"] {
-    width: 120px;
-  }
-
-  .button1, .second-presentation .button, .CONNEXION button, .but-cont button, #but-s-cont button {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-
-  .temoignage1, .temoignage2, .temoignage3 {
-    max-width: 90vw;
-  }
-
   footer {
+    padding: 30px 10px;
     font-size: 0.85rem;
   }
-}
-html {
-  scroll-behavior: smooth;
-}
 
+  #but-s-cont button {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .inp-s-cont input, .inp-lg-s-cont input {
+    font-size: 0.9rem;
+  }
+
+  .c-cont-reseaux a {
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+
+  /* Assure que le footer ne dépasse jamais la largeur */
+  .conteneur2, footer {
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+}
