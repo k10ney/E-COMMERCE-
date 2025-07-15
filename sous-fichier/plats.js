@@ -10,6 +10,8 @@
       toggle.classList.toggle("active");
       navList.classList.toggle("active");
     });
+    // style du coeur
+ 
  const but1 = document.querySelector(".btn1"); 
 
  const but3 = document.querySelector(".btn3"); 
@@ -32,7 +34,17 @@ const but17= document.querySelector(".btn17");
  const but21 = document.querySelector(".btn21"); 
 
  const but23= document.querySelector(".btn23"); 
+ const but25 = document.querySelector(".btn25"); 
 
+ const but27 = document.querySelector(".btn27"); 
+
+const but29= document.querySelector(".btn29"); 
+
+ const but31 = document.querySelector(".btn31"); 
+
+ const but33 = document.querySelector(".btn33"); 
+
+ const but35= document.querySelector(".btn35"); 
 
  const p1 =document.querySelector(".p1") 
  const p2=document.querySelector(".p2") 
@@ -47,6 +59,12 @@ const but17= document.querySelector(".btn17");
  const p10 =document.querySelector(".p10") 
  const p11=document.querySelector(".p11") 
  const p12 =document.querySelector(".p12") 
+  const p13 =document.querySelector(".p13") 
+ const p14=document.querySelector(".p14") 
+ const p15 =document.querySelector(".p15") 
+ const p16 =document.querySelector(".p16") 
+ const p17=document.querySelector(".p17") 
+ const p18 =document.querySelector(".p18") 
 
 
 but1.addEventListener('click', () => {
@@ -85,4 +103,55 @@ but21.addEventListener('click', () => {
 but23.addEventListener('click', () => {
  p12.classList.toggle("active12");
 });
+but25.addEventListener('click', () => {
+ p13.classList.toggle("active13");
+});
+but27.addEventListener('click', () => {
+ p14.classList.toggle("active14");
+});
+but29.addEventListener('click', () => {
+ p15.classList.toggle("active15");
+});
+but31.addEventListener('click', () => {
+ p16.classList.toggle("active16");
+});
+but33.addEventListener('click', () => {
+ p17.classList.toggle("active17");
+});
+but35.addEventListener('click', () => {
+ p18.classList.toggle("active18");
+});
+         // Style d'abonnement 
+   const form2 = document.getElementById("form2");
+const abonnement = document.getElementById("abonnement");
+
+// Empêcher la soumission si le champ est vide
+form2.addEventListener("submit", (e) => {
+  e.preventDefault();
+  form_verify2();
+});
+
+// Fonction de vérification
+function form_verify2() {
+  const abonnvalue = abonnement.value.trim();
+
+  if (abonnvalue === "") {
+    erro(abonnement, "L'email est requis");
+  } else {
+    succ(abonnement, "Abonnez-vous à la page");
+  }
+  alert('Vous êtes abonnez !✔')
+}
+
+// Fonction d'erreur
+function erro(element, message) {
+  element.style.border = "2px solid red";
+  alert(message);
+}
+
+// Fonction de succès
+function succ(element, message) {
+  element.style.border = "2px solid green";
+  alert(message);
+}
     

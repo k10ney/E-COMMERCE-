@@ -44,12 +44,12 @@
         <li class="nav-titre"><a href="/index.html#E" class="nav-link">Contact</a></li>
 
         <li class="nav-titre"><a href="#" class="nav-link">A la carte</a></li>
-         <li class="nav-titre"><a href="#" class="nav-link">Plats</a></li>
+         <li class="nav-titre"><a href="Plats.html" class="nav-link">Plats</a></li>
         <li>
           <a href="#"><i class="fas fa-palette" onclick="couleur()"></i></a>
         </li>
          <li>
-          <a href="#"><i class="fas fa-shopping-cart" ></i></a>
+          <a href="/panier.html"><i class="fas fa-shopping-cart" ></i></a>
         </li>
         <div class="CONNEXION">
           <a href="sous-fichier/connection.html"
@@ -81,27 +81,29 @@
     <div class="connec-logo">
       <i class="fas fa-user"></i>
     </div>
-    <div class="name-connec">
-      <input type="text" placeholder="Nom d'utilisateur ou e-mail" />
-    </div>
-    <div class="pass-connec">
-      <input type="password" placeholder="Mot de passe" />
-    </div>
-    <div class="but-connec">
-      <button>Se connecter</button>
-    </div>
-    <div class="forget-connec">
-      <a href="#">Mot de passe oublié ?</a>
-    </div>
-  </div>
+    <form  method="post" class="form">
+      <div class="name-connec">
+       <input type="text" id="username" placeholder="Nom d'utilisateur ou e-mail" />
+     </div>
+     <div class="pass-connec">
+       <input type="password"   id="password" placeholder="Mot de passe" />
+     </div>
+     <div class="but-connec">
+       <button type="submit">Se connecter</button>
+     </div>
+     <div class="forget-connec">
+       <a href="#">Mot de passe oublié ?</a>
+     </div>
+     </form>
+   </div>
 
   <!-- FOOTER -->
-  <footer>
+ <footer>
     <div class="conteneur2">
       <div class="n-cont">
         <span class="titre">African </span> Food
         <p>
-          Vente de nourriture africaine partout dans le monde. Notre mission est de 
+          Vente de nourriture Africain partout dans le monde notre mission est de
           faire découvrir la richesse de la cuisine africaine à travers le monde.
           Depuis le début, nous avons eu une vision claire : partager des plats
           authentiques, préparés avec passion, et livrés partout dans le monde.
@@ -110,12 +112,12 @@
       </div>
       <div class="c-cont">
         <h1>Contact</h1>
-        <p><i class="fas fa-phone"></i> +225 05 44 94 06 85</p>
-        <p><i class="fas fa-map-marker-alt"></i> Côte d'Ivoire, Sénégal, Nigeria</p>
-        <p><i class="fas fa-envelope"></i> Africanfood@gmail.com</p>
-        <a href="#"><p>À propos de nous</p></a>
+        <p><i class="fas fa-phone"></i> +225 05 44 94 06 85 </p>
+        <p><i class="fas fa-map-marker-alt"></i>Côte D'ivoire ,Senegal,Nigeria</p>
+        <p><i class="fas fa-envelope"></i>Africanfood@gmail.com</p>
+        <a href="#"><p>A Propos de Nous </p></a>
         <div class="c-cont-reseaux">
-           <a
+          <a
             href="https://www.facebook.com/profile.php?id=61575259052471"
             class="facebook"
             target="_blank"
@@ -145,28 +147,37 @@
           ></a>
         </div>
       </div>
+
       <div class="s-cont">
         <div class="h1-s-cont">
           <h1>S'abonner à la newsletter</h1>
         </div>
+        <form   id="form2">
         <div class="inp-s-cont">
-          <input type="email" placeholder="Adresse email" />
+          <input type="email" placeholder="Adresse email" id="abonnement" />
         </div>
         <div id="but-s-cont">
-          <button>S'abonner</button>
+          <button type="submit" >S'abonner</button>
         </div>
+        </form>
         <div class="inp-lg-s-cont">
-          <input list="languages" id="language" name="language" placeholder="Choisissez une langue" />
+          <input
+            list="languages"
+            id="language"
+            name="language"
+            placeholder="Choisissez une langue"
+          />
           <datalist id="languages">
-            <option value="Français">
-            <option value="English">
-            <option value="Espagnol">
-            <option value="Chinois">
+            <option value="Français" >
+            <option value="English" >
+            <option value="espagnole" >
+            <option value="chinois" >
           </datalist>
         </div>
       </div>
     </div>
   </footer>
+
  <script>
   function couleur(){
       alert("vous allez changer la couleur de la page")
@@ -180,7 +191,88 @@
       toggle.classList.toggle("active");
       navList.classList.toggle("active");
     });
-    
+   const form = document.querySelector(".form");
+const username = document.getElementById("username");
+const passwordField = document.getElementById("password");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  form_verify();
+});
+
+function form_verify() {
+  const uservalue = username.value.trim();
+  const password = passwordField.value.trim();
+  const formatValide = /^(?=.*[a-zA-Z])(?=.*\d).{8,}$/;
+
+
+  if (uservalue === "") {
+    error(username, "Entrez votre nom !");
+  } else if (!isNaN(uservalue)) {
+    setsuccess1(username, "Vous avez choisi d'entrer un numéro !");
+  } else {
+    setsuccess(username);
+  }
+
+
+  if (password === "") {
+    error(passwordField, "clické sur mot de pass oublié pour le réinitialisé " );
+  } else if (!formatValide.test(password)) {
+    error(passwordField, "Le mot de passe doit contenir au moins 8 caractères, avec des lettres et des chiffres !");
+  } else {
+    setsuccess(passwordField);
+  }
+}
+
+function error(element, message) {
+  element.style.border = "2px solid green";
+  alert(message);
+}
+
+function setsuccess1(element, message) {
+  element.style.border = "2px solid green";
+  alert(message);
+}
+
+
+function setsuccess(element) {
+  element.style.border = "2px solid green";
+}
+        // Style d'abonnement 
+   const form2 = document.getElementById("form2");
+const abonnement = document.getElementById("abonnement");
+
+// Empêcher la soumission si le champ est vide
+form2.addEventListener("submit", (e) => {
+  e.preventDefault();
+  form_verify2();
+});
+
+// Fonction de vérification
+function form_verify2() {
+  const abonnvalue = abonnement.value.trim();
+
+  if (abonnvalue === "") {
+    erro(abonnement, "L'email est requis");
+  } else {
+    succ(abonnement, "Abonnez-vous à la page");
+  }
+  alert('Vous êtes abonnez !✔')
+}
+
+// Fonction d'erreur
+function erro(element, message) {
+  element.style.border = "2px solid red";
+  alert(message);
+}
+
+// Fonction de succès
+function succ(element, message) {
+  element.style.border = "2px solid green";
+  alert(message);
+}
+
+
  </script>
 </body>
 </html>

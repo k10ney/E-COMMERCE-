@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panier - African Food</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  </head>
+
+<body>
+  <header>
+  <nav class="nav-bar">
+    <div class="logo"><span class="titre">African </span> Food</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="bar-de-recherche">
+      <input type="search" placeholder="🔎 Recherche" />
+      <button>Search</button>
+    </div>
+    <ul class="nav-liste">
+      <li class="nav-titre"><a href="/index.html#A" class="nav-link">Accueil</a></li>
+      <li class="nav-titre"><a href="/index.html#B" class="nav-link">Nouveautés</a></li>
+      <li class="nav-titre"><a href="/index.html#C" class="nav-link">Expert</a></li>
+      <li class="nav-titre"><a href="/index.html##D" class="nav-link">Témoignages</a></li>
+      <li class="nav-titre"><a href="/index.html#E" class="nav-link">Contact</a></li>
+      <li class="nav-titre"><a href="/index.html#A" class="nav-link">A la carte</a></li>
+      <li class="nav-titre"><a href="sous-fichier/Plats.html" class="nav-link">Plats</a></li>
+      <li><a href="#"><i class="fas fa-palette" onclick="couleur()"></i></a></li>
+      <li><a href="panier.html"><i class="fas fa-shopping-cart"></i></a></li>
+      <div class="CONNEXION">
+        <a href="sous-fichier/connexion.html"><button>CONNEXION</button></a>
+        <a href="#"><button>SIGN UP</button></a>
+      </div>
+    </ul>
+  </nav>
+</header>
+  <style>
+    /* Reset & base */* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  line-height: 1.5;
+  font-size: 16px;
+}
+/* style des font-aversone panier et couleur */
+.fa-palette{
+  cursor: pointer;
+}
+.fa-palette:hover{
+  color: #ff7f00 ;
+}
+.fa-palette:focus{
+  color: rgb(241, 5, 5);
+}
+.fa-shopping-cart{
+  cursor: pointer;
+}
+
+.fa-shopping-cart:hover{
+  color: #ff7f00 ;
+}
+.fa-shopping-cart:focus{
+  color: rgb(241, 5, 5);
+}
+
+/* changement de couleur  de la page */
+body.active{
+  background: #a5a1a1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/*  HEADER NAVIGATION  */
+.nav-bar {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.logo .titre {
+  color: #ff7f00; 
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #ff7f00;
+  border-radius: 2px;
+}
+
+.bar-de-recherche {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.bar-de-recherche input[type="search"] {
+  padding: 8px 12px;
+  border: 1.5px solid #ff7f00;
+  border-radius: 5px;
+  width: 180px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.bar-de-recherche input[type="search"]:focus {
+  outline: none;
+  border-color: #cc6600;
+}
+
+.bar-de-recherche button {
+  background-color: #ff7f00;
+  color: white;
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.bar-de-recherche button:hover {
+  background-color: #cc6600;
+}
+
+.nav-liste {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.nav-titre a {
+  font-weight: 600;
+  color: #444;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-titre a:hover {
+  background-color: #ff7f00;
+  color: white;
+}
+
+.CONNEXION button {
+  background-color: #ff7f00;
+  color: white;
+  padding: 8px 14px;
+  margin-left: 5px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.CONNEXION button:hover {
+  background-color: #cc6600;
+}
+
+/* Responsive menu hamburger */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-liste {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+    background-color: white;
+    padding: 15px 0;
+  }
+
+  .nav-liste.active {
+    display: flex;
+    font-size: 10px;
+  }
+
+  .nav-titre a {
+    padding: 12px 20px;
+  }
+
+  .CONNEXION {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .bar-de-recherche {
+    width: 100%;
+    justify-content: center;
+    margin: 15px 0;
+  }
+}
+
+    /* TITRE PAGE */
+  h1  {
+     
+      margin-bottom: 20px;
+           color: #e67e22;
+      font-size: 2rem;
+    }
+
+    /* LISTE PANIER */
+    #panier-liste {
+      max-width: 900px;
+      margin: auto;
+      margin-bottom: 15px;
+      padding: 0 10px;
+    }
+    .panier-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 15px;
+      background: #fff;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+      gap: 10px;
+    }
+    .nom-produit {
+      flex: 1 1 35%;
+      font-weight: 600;
+      font-size: 1.1rem;
+      word-break: break-word;
+    }
+    .prix-produit {
+      flex: 1 1 20%;
+      text-align: right;
+      font-weight: bold;
+      color: #e67e22;
+      font-size: 1.1rem;
+      min-width: 90px;
+    }
+    .quantite-container {
+      flex: 1 1 25%;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+    }
+    .quantite-container label {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .quantite-container select {
+      padding: 6px 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+    }
+    .quantite-container select:focus {
+      outline: none;
+      border-color: #d35400;
+      box-shadow: 0 0 5px #e67e22aa;
+    }
+    .supprimer-btn {
+      flex: 1 1 100px;
+      background-color: #e74c3c;
+      border: none;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      min-width: 100px;
+    }
+    .supprimer-btn:hover {
+      background-color: #c0392b;
+    }
+
+    /* Total */
+    .total {
+      max-width: 900px;
+      margin: 15px auto 30px;
+      font-weight: bold;
+      font-size: 1.4rem;
+      text-align: right;
+      color: #e67e22;
+      padding: 0 10px;
+    }
+
+    /* BOUTON COMMANDER */
+    #btn-commander {
+      display: block;
+      max-width: 900px;
+      margin: 0 auto 30px;
+      padding: 15px;
+      background-color: #d35400;
+      color: white;
+      font-weight: 700;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      width: 100%;
+      max-width: 400px;
+      transition: background-color 0.3s ease;
+      text-align: center;
+    }
+    #btn-commander:hover {
+      background-color: #e67e22;
+    }
+
+    /* FORMULAIRE DE COMMANDE */
+    #commande-form {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      background: white;
+      padding: 25px 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgb(0 0 0 / 0.1);
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+    }
+    #commande-form.active {
+      display: flex;
+    }
+    #commande-form h2 {
+      color: #d35400;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    #commande-form label {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    #commande-form input, #commande-form select {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+    #commande-form input:focus, #commande-form select:focus {
+      outline: none;
+      border-color: #d35400;
+      box-shadow: 0 0 5px #e67e22aa;
+    }
+    #commande-form button {
+      margin-top: 20px;
+      background-color: #d35400;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+    #commande-form button:hover {
+      background-color: #e67e22;
+    }
+footer {
+  background-color: #222;
+  color: #ddd;
+  padding: 40px 20px;
+  font-size: 0.95rem;
+}
+
+.conteneur2 {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.n-cont, .c-cont, .s-cont {
+  flex: 1 1 280px;
+  min-width: 250px;
+}
+
+.n-cont .titre {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #ff7f00;
+  margin-bottom: 15px;
+}
+
+.n-cont p {
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.c-cont h1 {
+   margin-left: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ff7f00;
+}
+
+.c-cont p, .c-cont a p {
+  margin-bottom: 10px;
+  color: #ccc;
+  cursor: default;
+}
+
+.c-cont a p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.c-cont-reseaux a {
+  color: #ccc;
+  font-size: 1.4rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.c-cont-reseaux a:hover {
+  color: #ff7f00;
+}
+
+.s-cont h1 {
+  color: #ff7f00;
+  margin-bottom: 20px;
+ 
+}
+
+.inp-s-cont input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+#but-s-cont button {
+  background-color: #ff7f00;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-weight: 700;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+#but-s-cont button:hover {
+  background-color: #cc6600;
+}
+
+.inp-lg-s-cont input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .conteneur2 {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .welcome-section {
+    padding: 30px 10px;
+  }
+
+  .descrip-logo-connect {
+    margin: 20px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+  </style>
+
+
+<h1>Votre Panier</h1>
+
+<div id="panier-liste">
+  <!-- Les produits ajoutés seront listés ici -->
+</div>
+
+<div class="total" id="total-prix">Total : 0 FCFA</div>
+
+<button id="btn-commander">Commander maintenant</button>
+
+<form id="commande-form" novalidate>
+  <h2>Informations de livraison</h2>
+
+  <label for="nom">Nom *</label>
+  <input type="text" id="nom" name="nom" required />
+
+  <label for="prenom">Prénom *</label>
+  <input type="text" id="prenom" name="prenom" required />
+
+  <label for="telephone">Numéro de téléphone *</label>
+  <input type="tel" id="telephone" name="telephone" required pattern="[0-9+ ]{8,15}" placeholder="+225 05 44 94 06 85" />
+  <label for="quartier">QCommune*</label>
+
+  <input type="text" id="quartier" name="quartier" required />
+
+  <label for="ville">Ville *</label>
+  <input type="text" id="ville" name="ville" required />
+
+  <label for="pays">Pays *</label>
+  <input type="text" id="pays" name="pays" required />
+
+  <label for="heure">Heure souhaitée de livraison *</label>
+  <input type="time" id="heure" name="heure" required />
+
+  <button type="submit">Valider la commande</button>
+</form>
+
+
+<script>
+  // Nav hamburger toggle
+  const toggle = document.getElementById("menu-toggle");
+  const navList = document.querySelector(".nav-liste");
+  toggle.addEventListener("click", () => {
+    toggle.classList.toggle("active");
+    navList.classList.toggle("active");
+  });
+
+  // Récupération panier depuis localStorage
+  let panier = JSON.parse(localStorage.getItem('panier')) || [];
+
+  const panierListe = document.getElementById('panier-liste');
+  const totalPrix = document.getElementById('total-prix');
+  const form = document.getElementById('commande-form');
+  const btnCommander = document.getElementById('btn-commander');
+
+  // Afficher panier avec quantités et prix calculés
+  function afficherPanier() {
+    panierListe.innerHTML = '';
+    if (panier.length === 0) {
+      panierListe.innerHTML = '<p>Votre panier est vide.</p>';
+      totalPrix.textContent = 'Total : 0 FCFA';
+      btnCommander.style.display = 'none';
+      form.classList.remove('active');
+      return;
+    }
+    btnCommander.style.display = 'block';
+
+    let total = 0;
+    panier.forEach((item, index) => {
+      total += item.prix * (item.quantite || 1);
+
+      const itemDiv = document.createElement('div');
+      itemDiv.className = 'panier-item';
+
+      // Nom produit
+      const nomDiv = document.createElement('div');
+      nomDiv.className = 'nom-produit';
+      nomDiv.textContent = item.nom;
+
+      // Prix produit unitaire
+      const prixDiv = document.createElement('div');
+      prixDiv.className = 'prix-produit';
+      prixDiv.textContent = item.prix.toLocaleString() + ' FCFA';
+
+      // Quantité (select)
+      const quantiteContainer = document.createElement('div');
+      quantiteContainer.className = 'quantite-container';
+      const quantiteLabel = document.createElement('label');
+      quantiteLabel.textContent = 'Quantité : ';
+      quantiteLabel.htmlFor = `quantite-${index}`;
+      const quantiteSelect = document.createElement('select');
+      quantiteSelect.id = `quantite-${index}`;
+      quantiteSelect.name = `quantite-${index}`;
+      [1, 2, 3, 4,5,6,7].forEach(q => {
+        const option = document.createElement('option');
+        option.value = q;
+        option.textContent = q;
+        quantiteSelect.appendChild(option);
+      });
+      quantiteSelect.value = item.quantite || 1;
+      quantiteSelect.addEventListener('change', () => {
+        panier[index].quantite = Number(quantiteSelect.value);
+        localStorage.setItem('panier', JSON.stringify(panier));
+        afficherPanier();
+      });
+      quantiteContainer.appendChild(quantiteLabel);
+      quantiteContainer.appendChild(quantiteSelect);
+
+      // Bouton supprimer
+      const btnSupprimer = document.createElement('button');
+      btnSupprimer.className = 'supprimer-btn';
+      btnSupprimer.textContent = 'Supprimer';
+      btnSupprimer.addEventListener('click', () => {
+        supprimerProduit(index);
+      });
+
+      itemDiv.appendChild(nomDiv);
+      itemDiv.appendChild(prixDiv);
+      itemDiv.appendChild(quantiteContainer);
+      itemDiv.appendChild(btnSupprimer);
+
+      panierListe.appendChild(itemDiv);
+    });
+
+    totalPrix.textContent = `Total : ${total.toLocaleString()} FCFA`;
+  }
+
+  function supprimerProduit(index) {
+    panier.splice(index, 1);
+    localStorage.setItem('panier', JSON.stringify(panier));
+    afficherPanier();
+  }
+
+  // Affiche le formulaire commande au clic sur bouton commander
+  btnCommander.addEventListener('click', () => {
+    form.classList.toggle('active');
+    form.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  // Validation et soumission formulaire
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    if (panier.length === 0) {
+      alert('Votre panier est vide, ajoutez des articles avant de commander.');
+      return;
+    }
+
+    if (!form.checkValidity()) {
+      alert('Merci de remplir correctement tous les champs.');
+      return;
+    }
+
+    // Calcul du total quantité
+    const totalQuantite = panier.reduce((acc, item) => acc + (item.quantite || 1), 0);
+
+    // Création objet commande
+    const commande = {
+      nom: form.nom.value.trim(),
+      prenom: form.prenom.value.trim(),
+      telephone: form.telephone.value.trim(),
+      quartier: form.quartier.value.trim(),
+      ville: form.ville.value.trim(),
+      pays: form.pays.value.trim(),
+      heureLivraison: form.heure.value,
+      panier: panier
+    };
+
+    alert(
+      `Merci ${commande.prenom} ${commande.nom} !\n` +
+      `Vous avez commandé ${totalQuantite} article(s).\n` +
+      `Livraison prévue à ${commande.heureLivraison} dans le quartier ${commande.quartier}.`
+    );
+
+    // Vider panier et formulaire
+    //     localStorage.removeItem('panier');
+    panier = [];
+    afficherPanier();
+    form.reset();
+    form.classList.remove('active');
+  });
+
+  // Initial affichage panier
+  afficherPanier();
+
+  // Fonction toggle couleur (exemple)
+  function couleur() {
+    alert("vous allez changer la couleur de la page");
+    document.body.classList.toggle("active");
+  }
+     // Style d'abonnement 
+   const form2 = document.getElementById("form2");
+const abonnement = document.getElementById("abonnement");
+
+// Empêcher la soumission si le champ est vide
+form2.addEventListener("submit", (e) => {
+  e.preventDefault();
+  form_verify2();
+});
+
+// Fonction de vérification
+function form_verify2() {
+  const abonnvalue = abonnement.value.trim();
+
+  if (abonnvalue === "") {
+    erro(abonnement, "L'email est requis");
+  } else {
+    succ(abonnement, "Abonnez-vous à la page");
+  }
+  alert('Vous êtes abonnez !✔')
+}
+
+// Fonction d'erreur
+function erro(element, message) {
+  element.style.border = "2px solid red";
+  alert(message);
+}
+
+// Fonction de succès
+function succ(element, message) {
+  element.style.border = "2px solid green";
+  alert(message);
+}
+</script>
+<footer>
+    <div class="conteneur2">
+      <div class="n-cont">
+        <span class="titre">African </span> Food
+        <p>
+          Vente de nourriture africaine partout dans le monde. Notre mission est de 
+          faire découvrir la richesse de la cuisine africaine à travers le monde.
+          Depuis le début, nous avons eu une vision claire : partager des plats
+          authentiques, préparés avec passion, et livrés partout dans le monde.
+          Goûtez à l’Afrique, où que vous soyez !
+        </p>
+      </div>
+      <div class="c-cont">
+        <h1>Contact</h1>
+        <p><i class="fas fa-phone"></i> +225 05 44 94 06 85</p>
+        <p><i class="fas fa-map-marker-alt"></i> Côte d'Ivoire, Sénégal, Nigeria</p>
+        <p><i class="fas fa-envelope"></i> Africanfood@gmail.com</p>
+        <a href="#"><p>À propos de nous</p></a>
+        <div class="c-cont-reseaux">
+           <a
+            href="https://www.facebook.com/profile.php?id=61575259052471"
+            class="facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/k10ney.officiel?igsh=NTNjZ2NobjE2NG14"
+            class="instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://chat.whatsapp.com/CQpwmMHNRSSLkU36hlXfEn "
+            class="whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a
+            href="#"
+            class="youtube"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+      <div class="s-cont">
+        <div class="h1-s-cont">
+          <h1>S'abonner à la newsletter</h1>
+        </div>
+       <form   id="form2">
+        <div class="inp-s-cont">
+          <input type="email" placeholder="Adresse email" id="abonnement" />
+        </div>
+        <div id="but-s-cont">
+          <button type="submit" >S'abonner</button>
+        </div>
+        </form>
+        <div class="inp-lg-s-cont">
+          <input list="languages" id="language" name="language" placeholder="Choisissez une langue" />
+          <datalist id="languages">
+            <option value="Français">
+            <option value="English">
+            <option value="Espagnol">
+            <option value="Chinois">
+          </datalist>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
