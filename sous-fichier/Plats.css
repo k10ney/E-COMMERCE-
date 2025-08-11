@@ -235,7 +235,8 @@ li{
 }
 .conteneur {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5,1fr);
   gap: 20px;
   padding: 20px;
   max-width: 1200px;
@@ -502,8 +503,8 @@ button{
 
   /* Grille des plats : passer à une colonne */
   .conteneur {
-    grid-template-columns:  repeat(3, 1fr);
-    grid-template-rows:(  2 auto );
+    grid-template-columns:  repeat(2, 1fr);
+    grid-template-rows:( 2,1fr );
     max-width: 90vw ;
     padding: 10px ;
   }

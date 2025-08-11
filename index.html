@@ -239,15 +239,15 @@
     <form class="form">
       <div class="nm">
         <label for="username" class="nom">Nom</label>
-        <input type="text" id="username" />
+        <input type="text" id="username" required />
       </div>
       <div class="email">
         <label for="email" class="pp">Email</label>
-        <input type="email" id="email" />
+        <input type="email" id="email"  required/>
       </div>
       <div class="message">
         <label for="message" class="mg">Message</label>
-        <textarea name="message" id="message"></textarea>
+        <textarea name="message" id="message" required></textarea>
       </div>
       <div class="but-cont">
         <button type="submit">Envoyez</button>
@@ -311,7 +311,7 @@
         </div>
         <form   id="form2">
         <div class="inp-s-cont">
-          <input type="email" placeholder="Adresse email" id="abonnement" />
+          <input type="email" placeholder="Adresse email" id="abonnement" required />
         </div>
         <div id="but-s-cont">
           <button type="submit" >S'abonner</button>

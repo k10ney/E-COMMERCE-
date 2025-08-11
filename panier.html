@@ -8,7 +8,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  </head>
+</head>
 
 <body>
   <header>
@@ -38,8 +38,10 @@
     </ul>
   </nav>
 </header>
-  <style>
-    /* Reset & base */* {
+
+<style>
+/* Reset & base */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -52,6 +54,7 @@ body {
   line-height: 1.5;
   font-size: 16px;
 }
+
 /* style des font-aversone panier et couleur */
 .fa-palette{
   cursor: pointer;
@@ -93,7 +96,6 @@ button {
 
 /*  HEADER NAVIGATION  */
 .nav-bar {
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -231,176 +233,428 @@ button {
   }
 }
 
-    /* TITRE PAGE */
-  h1  {
-     
-      margin-bottom: 20px;
-           color: #e67e22;
-      font-size: 2rem;
-    }
+/* TITRE PAGE */
+h1  {
+  margin-bottom: 20px;
+  color: #e67e22;
+  font-size: 2rem;
+}
 
-    /* LISTE PANIER */
-    #panier-liste {
-      max-width: 900px;
-      margin: auto;
-      margin-bottom: 15px;
-      padding: 0 10px;
-    }
-    .panier-item {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 15px;
-      background: #fff;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
-      gap: 10px;
-    }
-    .nom-produit {
-      flex: 1 1 35%;
-      font-weight: 600;
-      font-size: 1.1rem;
-      word-break: break-word;
-    }
-    .prix-produit {
-      flex: 1 1 20%;
-      text-align: right;
-      font-weight: bold;
-      color: #e67e22;
-      font-size: 1.1rem;
-      min-width: 90px;
-    }
-    .quantite-container {
-      flex: 1 1 25%;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      justify-content: center;
-    }
-    .quantite-container label {
-      font-weight: 600;
-      font-size: 1rem;
-    }
-    .quantite-container select {
-      padding: 6px 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: border-color 0.3s ease;
-    }
-    .quantite-container select:focus {
-      outline: none;
-      border-color: #d35400;
-      box-shadow: 0 0 5px #e67e22aa;
-    }
-    .supprimer-btn {
-      flex: 1 1 100px;
-      background-color: #e74c3c;
-      border: none;
-      color: white;
-      padding: 8px 15px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
-      text-align: center;
-      min-width: 100px;
-    }
-    .supprimer-btn:hover {
-      background-color: #c0392b;
-    }
+/* LISTE PANIER */
+#panier-liste {
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
 
-    /* Total */
-    .total {
-      max-width: 900px;
-      margin: 15px auto 30px;
-      font-weight: bold;
-      font-size: 1.4rem;
-      text-align: right;
-      color: #e67e22;
-      padding: 0 10px;
-    }
+.panier-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background: #fff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+  gap: 10px;
+}
 
-    /* BOUTON COMMANDER */
-    #btn-commander {
-      display: block;
-      max-width: 900px;
-      margin: 0 auto 30px;
-      padding: 15px;
-      background-color: #d35400;
-      color: white;
-      font-weight: 700;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1.2rem;
-      width: 100%;
-      max-width: 400px;
-      transition: background-color 0.3s ease;
-      text-align: center;
-    }
-    #btn-commander:hover {
-      background-color: #e67e22;
-    }
+.nom-produit {
+  flex: 1 1 35%;
+  font-weight: 600;
+  font-size: 1.1rem;
+  word-break: break-word;
+}
 
-    /* FORMULAIRE DE COMMANDE */
-    #commande-form {
-      max-width: 900px;
-      margin: 0 auto 60px;
-      background: white;
-      padding: 25px 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgb(0 0 0 / 0.1);
-      display: none;
-      flex-direction: column;
-      gap: 12px;
-    }
-    #commande-form.active {
-      display: flex;
-    }
-    #commande-form h2 {
-      color: #d35400;
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    #commande-form label {
-      font-weight: 600;
-      font-size: 1rem;
-    }
-    #commande-form input, #commande-form select {
-      width: 100%;
-      padding: 10px 12px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      transition: border-color 0.3s ease;
-    }
-    #commande-form input:focus, #commande-form select:focus {
-      outline: none;
-      border-color: #d35400;
-      box-shadow: 0 0 5px #e67e22aa;
-    }
-    #commande-form button {
-      margin-top: 20px;
-      background-color: #d35400;
-      color: white;
-      border: none;
-      padding: 15px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1.2rem;
-      font-weight: 700;
-      transition: background-color 0.3s ease;
-      width: 100%;
-    }
-    #commande-form button:hover {
-      background-color: #e67e22;
-    }
+.prix-produit {
+  flex: 1 1 20%;
+  text-align: right;
+  font-weight: bold;
+  color: #e67e22;
+  font-size: 1.1rem;
+  min-width: 90px;
+}
+
+.quantite-container {
+  flex: 1 1 25%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.quantite-container label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.quantite-container select {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.quantite-container select:focus {
+  outline: none;
+  border-color: #d35400;
+  box-shadow: 0 0 5px #e67e22aa;
+}
+
+.supprimer-btn {
+  flex: 1 1 100px;
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  min-width: 100px;
+}
+
+.supprimer-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Total */
+.total {
+  max-width: 900px;
+  margin: 15px auto 30px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-align: right;
+  color: #e67e22;
+  padding: 0 10px;
+}
+
+/* OPTIONS D'ENVOI */
+.envoi-options {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.envoi-options h3 {
+  color: #d35400;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.option-button {
+  display: inline-block;
+  margin: 5px 10px 5px 0;
+  padding: 12px 20px;
+  background: #f8f9fa;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+}
+
+.option-button:hover {
+  background: #e9ecef;
+  border-color: #ff7f00;
+  transform: translateY(-2px);
+}
+
+.option-button.email {
+  background: linear-gradient(45deg, #ff7f00, #ff9500);
+  color: white;
+  border-color: #ff7f00;
+}
+
+.option-button.whatsapp {
+  background: linear-gradient(45deg, #25d366, #128c7e);
+  color: white;
+  border-color: #25d366;
+}
+
+/* BOUTON COMMANDER */
+#btn-commander {
+  display: block;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  padding: 15px;
+  background-color: #d35400;
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 100%;
+  max-width: 400px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+#btn-commander:hover {
+  background-color: #e67e22;
+}
+
+/* FORMULAIRE DE COMMANDE */
+#commande-form {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgb(0 0 0 / 0.1);
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#commande-form.active {
+  display: flex;
+}
+
+#commande-form h2 {
+  color: #d35400;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#commande-form label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+#commande-form input, #commande-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+#commande-form input:focus, #commande-form select:focus {
+  outline: none;
+  border-color: #d35400;
+  box-shadow: 0 0 5px #e67e22aa;
+}
+
+#commande-form button {
+  margin-top: 20px;
+  background-color: #d35400;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+#commande-form button:hover {
+  background-color: #e67e22;
+}
+
+/* HISTORIQUE DES COMMANDES */
+#historique-section {
+  max-width: 900px;
+  margin: 50px auto 60px;
+  padding: 0 10px;
+}
+
+#historique-section h2 {
+  color: #d35400;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 2px solid #ff7f00;
+  padding-bottom: 10px;
+}
+
+.historique-item {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-left: 4px solid #ff7f00;
+}
+
+.historique-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.commande-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.commande-numero {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #d35400;
+}
+
+.commande-date {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.commande-statut {
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* NOUVEAUX STATUTS AVEC PROGRESSION DE COULEURS */
+.statut-commande {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  border: 2px solid #c0392b;
+}
+
+.statut-commande:hover {
+  background: linear-gradient(135deg, #c0392b, #a93226);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.statut-preparation {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  border: 2px solid #e67e22;
+}
+
+.statut-preparation:hover {
+  background: linear-gradient(135deg, #e67e22, #d35400);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.statut-livraison {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  border: 2px solid #2980b9;
+}
+
+.statut-livraison:hover {
+  background: linear-gradient(135deg, #2980b9, #1f618d);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.statut-livre {
+  background: linear-gradient(135deg, #27ae60, #229954);
+  border: 2px solid #229954;
+}
+
+.statut-livre:hover {
+  background: linear-gradient(135deg, #229954, #1e8449);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.historique-details {
+  margin-bottom: 15px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.detail-value {
+  color: #333;
+}
+
+.plats-commandes {
+  margin-top: 15px;
+}
+
+.plats-titre {
+  font-weight: 700;
+  color: #d35400;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.plat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.plat-nom {
+  flex: 1;
+  font-weight: 500;
+}
+
+.plat-quantite {
+  margin: 0 15px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.plat-prix {
+  font-weight: 600;
+  color: #e67e22;
+}
+
+.historique-total {
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #d35400;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.aucun-historique {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 40px 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+/* FOOTER */
 footer {
   background-color: #222;
   color: #ddd;
@@ -435,7 +689,7 @@ footer {
 }
 
 .c-cont h1 {
-   margin-left: 0;
+  margin-left: 0;
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 20px;
@@ -467,7 +721,6 @@ footer {
 .s-cont h1 {
   color: #ff7f00;
   margin-bottom: 20px;
- 
 }
 
 .inp-s-cont input {
@@ -519,14 +772,34 @@ footer {
   .descrip-logo-connect {
     margin: 20px;
   }
+  
+  .historique-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .plat-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .option-button {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
 }
+
 html {
   scroll-behavior: smooth;
 }
-
-
-  </style>
-
+</style>
 
 <h1>Votre Panier</h1>
 
@@ -537,6 +810,20 @@ html {
 <div class="total" id="total-prix">Total : 0 FCFA</div>
 
 <button id="btn-commander">Commander maintenant</button>
+
+<!-- OPTIONS D'ENVOI -->
+<div class="envoi-options" id="envoi-options" style="display: none;">
+  <h3><i class="fas fa-paper-plane"></i> Choisissez votre méthode d'envoi</h3>
+  <p>Comment souhaitez-vous recevoir la confirmation de votre commande ?</p>
+  <div style="margin-top: 15px;">
+    <button class="option-button email" onclick="envoyerParEmail()">
+      <i class="fas fa-envelope"></i> Envoyer par Email
+    </button>
+    <button class="option-button whatsapp" onclick="envoyerParWhatsApp()">
+      <i class="fab fa-whatsapp"></i> Envoyer via WhatsApp
+    </button>
+  </div>
+</div>
 
 <form id="commande-form" novalidate>
   <h2>Informations de livraison</h2>
@@ -549,8 +836,8 @@ html {
 
   <label for="telephone">Numéro de téléphone *</label>
   <input type="tel" id="telephone" name="telephone" required pattern="[0-9+ ]{8,15}" placeholder="+225 05 44 94 06 85" />
-  <label for="quartier">QCommune*</label>
-
+  
+  <label for="quartier">Commune*</label>
   <input type="text" id="quartier" name="quartier" required />
 
   <label for="ville">Ville *</label>
@@ -565,8 +852,22 @@ html {
   <button type="submit">Valider la commande</button>
 </form>
 
+<!-- SECTION HISTORIQUE DES COMMANDES -->
+<section id="historique-section">
+  <h2><i class="fas fa-history"></i> Historique des commandes</h2>
+  <div id="historique-liste">
+    <!-- L'historique sera affiché ici -->
+  </div>
+</section>
 
 <script>
+  // CONFIGURATION EMAIL/WHATSAPP - REMPLACEZ PAR VOS VRAIES INFORMATIONS
+  const CONFIG = {
+    EMAIL_DESTINATAIRE: 'yvannkouame880@gmail.com', // Remplacez par votre email
+    WHATSAPP_NUMERO: '+2250544940685', // Remplacez par votre numéro WhatsApp
+    NOM_RESTAURANT: 'African Food'
+  };
+
   // Nav hamburger toggle
   const toggle = document.getElementById("menu-toggle");
   const navList = document.querySelector(".nav-liste");
@@ -575,21 +876,26 @@ html {
     navList.classList.toggle("active");
   });
 
-  // Récupération panier depuis localStorage
+  // Variables globales
   let panier = JSON.parse(localStorage.getItem('panier')) || [];
+  let historiqueCommandes = JSON.parse(localStorage.getItem('historiqueCommandes')) || [];
+  let commandeEnCours = null;
 
   const panierListe = document.getElementById('panier-liste');
   const totalPrix = document.getElementById('total-prix');
   const form = document.getElementById('commande-form');
   const btnCommander = document.getElementById('btn-commander');
+  const envoi_options = document.getElementById('envoi-options');
+  const historiqueListe = document.getElementById('historique-liste');
 
-  // Afficher panier avec quantités et prix calculés
+  // Afficher panier
   function afficherPanier() {
     panierListe.innerHTML = '';
     if (panier.length === 0) {
       panierListe.innerHTML = '<p>Votre panier est vide.</p>';
       totalPrix.textContent = 'Total : 0 FCFA';
       btnCommander.style.display = 'none';
+      envoi_options.style.display = 'none';
       form.classList.remove('active');
       return;
     }
@@ -602,17 +908,14 @@ html {
       const itemDiv = document.createElement('div');
       itemDiv.className = 'panier-item';
 
-      // Nom produit
       const nomDiv = document.createElement('div');
       nomDiv.className = 'nom-produit';
       nomDiv.textContent = item.nom;
 
-      // Prix produit unitaire
       const prixDiv = document.createElement('div');
       prixDiv.className = 'prix-produit';
       prixDiv.textContent = item.prix.toLocaleString() + ' FCFA';
 
-      // Quantité (select)
       const quantiteContainer = document.createElement('div');
       quantiteContainer.className = 'quantite-container';
       const quantiteLabel = document.createElement('label');
@@ -621,7 +924,7 @@ html {
       const quantiteSelect = document.createElement('select');
       quantiteSelect.id = `quantite-${index}`;
       quantiteSelect.name = `quantite-${index}`;
-      [1, 2, 3, 4,5,6,7].forEach(q => {
+      [1, 2, 3, 4, 5, 6, 7].forEach(q => {
         const option = document.createElement('option');
         option.value = q;
         option.textContent = q;
@@ -636,7 +939,6 @@ html {
       quantiteContainer.appendChild(quantiteLabel);
       quantiteContainer.appendChild(quantiteSelect);
 
-      // Bouton supprimer
       const btnSupprimer = document.createElement('button');
       btnSupprimer.className = 'supprimer-btn';
       btnSupprimer.textContent = 'Supprimer';
@@ -661,11 +963,205 @@ html {
     afficherPanier();
   }
 
-  // Affiche le formulaire commande au clic sur bouton commander
+  // Affiche les options d'envoi au clic sur commander
   btnCommander.addEventListener('click', () => {
-    form.classList.toggle('active');
-    form.scrollIntoView({ behavior: 'smooth' });
+    envoi_options.style.display = 'block';
+    envoi_options.scrollIntoView({ behavior: 'smooth' });
   });
+
+  // Fonction pour générer le contenu de la commande
+  function genererContenuCommande(commande) {
+    let contenu = `🍽️ NOUVELLE COMMANDE - ${CONFIG.NOM_RESTAURANT} 🍽️\n\n`;
+    contenu += `📋 Commande #${commande.numeroCommande}\n`;
+    contenu += `📅 Date: ${new Date(commande.dateCommande).toLocaleString('fr-FR')}\n\n`;
+    
+    contenu += `👤 INFORMATIONS CLIENT:\n`;
+    contenu += `• Nom: ${commande.prenom} ${commande.nom}\n`;
+    contenu += `• Téléphone: ${commande.telephone}\n`;
+    contenu += `• Adresse: ${commande.quartier}, ${commande.ville}, ${commande.pays}\n`;
+    contenu += `• Heure de livraison souhaitée: ${commande.heureLivraison}\n\n`;
+    
+    contenu += `🍛 PLATS COMMANDÉS:\n`;
+    let totalCommande = 0;
+    commande.panier.forEach(item => {
+      const sousTotal = item.prix * (item.quantite || 1);
+      totalCommande += sousTotal;
+      contenu += `• ${item.nom}\n`;
+      contenu += `  Quantité: ${item.quantite || 1}\n`;
+      contenu += `  Prix unitaire: ${item.prix.toLocaleString()} FCFA\n`;
+      contenu += `  Sous-total: ${sousTotal.toLocaleString()} FCFA\n\n`;
+    });
+    
+    contenu += `💰 TOTAL: ${totalCommande.toLocaleString()} FCFA\n\n`;
+    contenu += `📦 Statut: En attente de préparation\n\n`;
+    contenu += `⏰ Cette commande a été passée le ${new Date().toLocaleString('fr-FR')}`;
+    
+    return contenu;
+  }
+
+  // Fonction pour envoyer par email
+  function envoyerParEmail() {
+    form.classList.add('active');
+    form.scrollIntoView({ behavior: 'smooth' });
+    
+    // Marquer que l'envoi se fera par email
+    form.setAttribute('data-envoi', 'email');
+  }
+
+  // Fonction pour envoyer via WhatsApp
+  function envoyerParWhatsApp() {
+    form.classList.add('active');
+    form.scrollIntoView({ behavior: 'smooth' });
+    
+    // Marquer que l'envoi se fera par WhatsApp
+    form.setAttribute('data-envoi', 'whatsapp');
+  }
+
+  // Fonction pour générer un numéro de commande unique
+  function genererNumeroCommande() {
+    return 'AF' + Date.now().toString().slice(-6);
+  }
+
+  // Fonction pour obtenir le texte et la classe CSS selon le statut
+  function getStatutInfo(statut) {
+    switch(statut) {
+      case 'commande':
+        return {
+          texte: 'Commande reçue',
+          classe: 'statut-commande'
+        };
+      case 'preparation':
+        return {
+          texte: 'En préparation',
+          classe: 'statut-preparation'
+        };
+      case 'livraison':
+        return {
+          texte: 'En livraison',
+          classe: 'statut-livraison'
+        };
+      case 'livre':
+        return {
+          texte: 'Livrée',
+          classe: 'statut-livre'
+        };
+      default:
+        return {
+          texte: 'Commande reçue',
+          classe: 'statut-commande'
+        };
+    }
+  }
+
+  // Fonction pour changer le statut d'une commande
+  function changerStatut(numeroCommande) {
+    const index = historiqueCommandes.findIndex(cmd => cmd.numeroCommande === numeroCommande);
+    if (index !== -1) {
+      const commande = historiqueCommandes[index];
+      
+      // Progression des statuts avec couleurs : commande -> preparation -> livraison -> livre
+      switch(commande.statut) {
+        case 'commande':
+          commande.statut = 'preparation';
+          break;
+        case 'preparation':
+          commande.statut = 'livraison';
+          break;
+        case 'livraison':
+          commande.statut = 'livre';
+          break;
+        case 'livre':
+          commande.statut = 'livre'; // Reste livrée
+          break;
+        default:
+          commande.statut = 'preparation';
+      }
+      
+      localStorage.setItem('historiqueCommandes', JSON.stringify(historiqueCommandes));
+      afficherHistorique();
+    }
+  }
+
+  // Fonction pour afficher l'historique des commandes
+  function afficherHistorique() {
+    if (historiqueCommandes.length === 0) {
+      historiqueListe.innerHTML = '<div class="aucun-historique">Aucune commande dans l\'historique</div>';
+      return;
+    }
+
+    historiqueListe.innerHTML = '';
+    
+    const commandesTriees = [...historiqueCommandes].reverse();
+    
+    commandesTriees.forEach(commande => {
+      const historiqueItem = document.createElement('div');
+      historiqueItem.className = 'historique-item';
+
+      const date = new Date(commande.dateCommande);
+      const dateFormatee = date.toLocaleDateString('fr-FR', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+
+      let totalCommande = 0;
+      commande.panier.forEach(item => {
+        totalCommande += item.prix * (item.quantite || 1);
+      });
+
+      const statutInfo = getStatutInfo(commande.statut);
+
+      historiqueItem.innerHTML = `
+        <div class="historique-header">
+          <div class="commande-info">
+            <div class="commande-numero">Commande #${commande.numeroCommande}</div>
+            <div class="commande-date">${dateFormatee}</div>
+          </div>
+          <div class="commande-statut ${statutInfo.classe}" onclick="changerStatut('${commande.numeroCommande}')" title="Cliquer pour changer le statut">
+            ${statutInfo.texte}
+          </div>
+        </div>
+        
+        <div class="historique-details">
+          <div class="detail-row">
+            <span class="detail-label">Client:</span>
+            <span class="detail-value">${commande.prenom} ${commande.nom}</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Téléphone:</span>
+            <span class="detail-value">${commande.telephone}</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Adresse:</span>
+            <span class="detail-value">${commande.quartier}, ${commande.ville}, ${commande.pays}</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Heure de livraison:</span>
+            <span class="detail-value">${commande.heureLivraison}</span>
+          </div>
+        </div>
+        
+        <div class="plats-commandes">
+          <div class="plats-titre">Plats commandés:</div>
+          ${commande.panier.map(item => `
+            <div class="plat-item">
+              <span class="plat-nom">${item.nom}</span>
+              <span class="plat-quantite">x${item.quantite || 1}</span>
+              <span class="plat-prix">${(item.prix * (item.quantite || 1)).toLocaleString()} FCFA</span>
+            </div>
+          `).join('')}
+        </div>
+        
+        <div class="historique-total">
+          Total: ${totalCommande.toLocaleString()} FCFA
+        </div>
+      `;
+
+      historiqueListe.appendChild(historiqueItem);
+    });
+  }
 
   // Validation et soumission formulaire
   form.addEventListener('submit', e => {
@@ -681,11 +1177,11 @@ html {
       return;
     }
 
-    // Calcul du total quantité
     const totalQuantite = panier.reduce((acc, item) => acc + (item.quantite || 1), 0);
 
-    // Création objet commande
     const commande = {
+      numeroCommande: genererNumeroCommande(),
+      dateCommande: new Date().toISOString(),
       nom: form.nom.value.trim(),
       prenom: form.prenom.value.trim(),
       telephone: form.telephone.value.trim(),
@@ -693,65 +1189,113 @@ html {
       ville: form.ville.value.trim(),
       pays: form.pays.value.trim(),
       heureLivraison: form.heure.value,
-      panier: panier
+      panier: [...panier],
+      statut: 'commande'
     };
 
-    alert(
-      `Merci ${commande.prenom} ${commande.nom} !\n` +
-      `Vous avez commandé ${totalQuantite} article(s).\n` +
-      `Livraison prévue à ${commande.heureLivraison} dans le quartier ${commande.quartier}.`
-    );
+    // Ajouter à l'historique
+    historiqueCommandes.push(commande);
+    localStorage.setItem('historiqueCommandes', JSON.stringify(historiqueCommandes));
+
+    // Générer le contenu de la commande
+    const contenuCommande = genererContenuCommande(commande);
+    
+    // Déterminer le type d'envoi
+    const typeEnvoi = form.getAttribute('data-envoi');
+    
+    if (typeEnvoi === 'email') {
+      // Envoi par email
+      const sujet = `Nouvelle commande ${CONFIG.NOM_RESTAURANT} - #${commande.numeroCommande}`;
+      const corps = encodeURIComponent(contenuCommande);
+      const lienEmail = `mailto:${CONFIG.EMAIL_DESTINATAIRE}?subject=${encodeURIComponent(sujet)}&body=${corps}`;
+      
+      // Ouvrir le client email
+      window.open(lienEmail, '_blank');
+      
+      alert(
+        `✅ Commande validée !\n\n` +
+        `📧 Votre client email va s'ouvrir pour envoyer la commande.\n\n` +
+        `Commande #${commande.numeroCommande}\n` +
+        `Client: ${commande.prenom} ${commande.nom}\n` +
+        `Articles: ${totalQuantite}\n` +
+        `Livraison: ${commande.heureLivraison} à ${commande.quartier}`
+      );
+    } else if (typeEnvoi === 'whatsapp') {
+      // Envoi via WhatsApp
+      const messageWhatsApp = encodeURIComponent(contenuCommande);
+      const lienWhatsApp = `https://wa.me/${CONFIG.WHATSAPP_NUMERO.replace('+', '')}?text=${messageWhatsApp}`;
+      
+      // Ouvrir WhatsApp
+      window.open(lienWhatsApp, '_blank');
+      
+      alert(
+        `✅ Commande validée !\n\n` +
+        `📱 WhatsApp va s'ouvrir pour envoyer la commande.\n\n` +
+        `Commande #${commande.numeroCommande}\n` +
+        `Client: ${commande.prenom} ${commande.nom}\n` +
+        `Articles: ${totalQuantite}\n` +
+        `Livraison: ${commande.heureLivraison} à ${commande.quartier}`
+      );
+    }
 
     // Vider panier et formulaire
-    //     localStorage.removeItem('panier');
     panier = [];
+    localStorage.setItem('panier', JSON.stringify(panier));
     afficherPanier();
     form.reset();
     form.classList.remove('active');
+    envoi_options.style.display = 'none';
+    form.removeAttribute('data-envoi');
+    
+    afficherHistorique();
   });
 
-  // Initial affichage panier
+  // Initial affichage panier et historique
   afficherPanier();
+  afficherHistorique();
 
-  // Fonction toggle couleur (exemple)
+  // Fonction toggle couleur
   function couleur() {
     alert("vous allez changer la couleur de la page");
     document.body.classList.toggle("active");
   }
-     // Style d'abonnement 
-   const form2 = document.getElementById("form2");
-const abonnement = document.getElementById("abonnement");
 
-// Empêcher la soumission si le champ est vide
-form2.addEventListener("submit", (e) => {
-  e.preventDefault();
-  form_verify2();
-});
+  // Style d'abonnement 
+  const form2 = document.getElementById("form2");
+  const abonnement = document.getElementById("abonnement");
 
-// Fonction de vérification
-function form_verify2() {
-  const abonnvalue = abonnement.value.trim();
-
-  if (abonnvalue === "") {
-    erro(abonnement, "L'email est requis");
-  } else {
-    succ(abonnement, "Abonnez-vous à la page");
+  // Empêcher la soumission si le champ est vide
+  if (form2) {
+    form2.addEventListener("submit", (e) => {
+      e.preventDefault();
+      form_verify2();
+    });
   }
-  alert('Vous êtes abonnez !✔')
-}
 
-// Fonction d'erreur
-function erro(element, message) {
-  element.style.border = "2px solid red";
-  alert(message);
-}
+  // Fonction de vérification
+  function form_verify2() {
+    const abonnvalue = abonnement.value.trim();
 
-// Fonction de succès
-function succ(element, message) {
-  element.style.border = "2px solid green";
-  alert(message);
-}
-</script>
+    if (abonnvalue === "") {
+      erro(abonnement, "L'email est requis");
+    } else {
+      succ(abonnement, "Abonnez-vous à la page");
+    }
+    alert('Vous êtes abonnez !✔')
+  }
+
+  // Fonction d'erreur
+  function erro(element, message) {
+    element.style.border = "2px solid red";
+    alert(message);
+  }
+
+  // Fonction de succès
+  function succ(element, message) {
+    element.style.border = "2px solid green";
+    alert(message);
+  }
+  </script>
 <footer>
     <div class="conteneur2">
       <div class="n-cont">

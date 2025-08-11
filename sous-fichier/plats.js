@@ -139,9 +139,11 @@ function form_verify2() {
     erro(abonnement, "L'email est requis");
   } else {
     succ(abonnement, "Abonnez-vous à la page");
-  }
-  alert('Vous êtes abonnez !✔')
+    alert('Vous êtes abonnez !✔')
+    abonnvalue === ""
+  }  
 }
+ 
 
 // Fonction d'erreur
 function erro(element, message) {
